@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { products } from '@/lib/products'
+import { BreadcrumbJsonLd } from '@/components/JsonLd'
+import { siteConfig } from '@/lib/config'
 
 const filters = ['All', 'Energy', 'Night Series', 'Fresh Series', 'Classic Series', 'Zero Series']
 
@@ -18,6 +20,10 @@ export default function ProductsPage() {
 
   return (
     <main style={{ paddingTop: 72 }}>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: siteConfig.url },
+        { name: 'Products', url: `${siteConfig.url}/products` },
+      ]} />
       {/* HERO */}
       <div className="pg-products-hero">
         <span className="section-label">Full Product Line</span>

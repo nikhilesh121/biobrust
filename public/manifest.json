@@ -1,0 +1,26 @@
+{
+  "name": "BIOBRUST – Fuel Every High Performance Moment",
+  "short_name": "BIOBRUST",
+  "description": "Premium energy drinks engineered for athletes, gamers, hustlers, and nightlife seekers. 7+ flavors. PAN India distribution.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050805",
+  "theme_color": "#92c640",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/Logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/Logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "shopping", "lifestyle"],
+  "lang": "en-IN"
+}

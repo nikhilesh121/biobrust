@@ -1,11 +1,29 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
-import { productImages } from '@/lib/config'
+import { productImages, siteConfig } from '@/lib/config'
+import { BreadcrumbJsonLd } from '@/components/JsonLd'
+
+export const metadata: Metadata = {
+  title: 'About BIOBRUST – Our Mission, Story & Energy Drink Philosophy',
+  description: 'Learn about BIOBRUST — the premium Indian energy drink brand built for athletes, gamers, and hustlers. PAN India distribution, 7+ flavors.',
+  alternates: { canonical: `${siteConfig.url}/about` },
+  openGraph: {
+    title: 'About BIOBRUST – Our Mission & Story',
+    description: 'Premium energy drinks engineered for peak performance. Learn the BIOBRUST story.',
+    url: `${siteConfig.url}/about`,
+    type: 'website',
+  },
+}
 
 export default function AboutPage() {
   return (
     <main style={{ paddingTop: 72 }}>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: siteConfig.url },
+        { name: 'About', url: `${siteConfig.url}/about` },
+      ]} />
       <div className="page-hero">
         <span className="section-label">Who We Are</span>
         <h1 className="section-title" style={{ marginTop: '.5rem' }}>
