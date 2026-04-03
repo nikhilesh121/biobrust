@@ -1,110 +1,143 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { products } from '@/lib/products'
 
+const filters = ['All', 'Energy', 'Night Series', 'Fresh Series', 'Classic Series', 'Zero Series']
+
 export default function ProductsPage() {
-  const [current, setCurrent] = useState(0)
-  const trackRef = useRef<HTMLDivElement>(null)
+  const [active, setActive] = useState('All')
+  const [hovered, setHovered] = useState<string | null>(null)
 
-  const cardWidth = 340 + 32 // card width + gap
-  const visible = typeof window !== 'undefined' ? Math.floor(window.innerWidth / cardWidth) : 3
-  const maxIndex = Math.max(0, products.length - 1)
-
-  const slide = (dir: number) => {
-    setCurrent((prev) => {
-      const next = prev + dir
-      if (next < 0) return 0
-      if (next > maxIndex) return maxIndex
-      return next
-    })
-  }
-
-  const offset = current * cardWidth
+  const filtered = active === 'All'
+    ? products
+    : products.filter(p => p.tag.toLowerCase().includes(active.toLowerCase().replace(' series', '').replace('energy', 'energy')))
 
   return (
     <main style={{ paddingTop: 72 }}>
-      <div className="page-hero">
-        <span className="section-label">Product Line</span>
-        <h1 className="section-title" style={{ marginTop: '.5rem' }}>
+      {/* HERO */}
+      <div className="pg-products-hero">
+        <span className="section-label">Full Product Line</span>
+        <h1 className="section-title pg-products-title">
           Choose Your <span>Formula</span>
         </h1>
-        <p style={{ color: 'var(--muted)', fontSize: '1rem', maxWidth: 600, margin: '.5rem auto 0', lineHeight: 1.7 }}>
-          Seven performance-engineered energy drinks. One iconic brand. Click any product to place your dealer order.
+        <p className="pg-products-sub">
+          Seven performance-engineered energy drinks. One iconic brand.<br className="pg-products-br" />
+          Click any product to explore and place your dealer order.
         </p>
+
+        {/* Filter Tabs */}
+        <div className="pg-filter-bar">
+          {filters.map(f => (
+            <button
+              key={f}
+              className={`pg-filter-btn${active === f ? ' active' : ''}`}
+              onClick={() => setActive(f)}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+
+        {/* Count */}
+        <div className="pg-product-count">
+          <span style={{ color: 'var(--neon)' }}>{filtered.length}</span> product{filtered.length !== 1 ? 's' : ''} available
+        </div>
       </div>
 
-      <div className="products-showcase">
-        <div className="products-track-wrap">
-          <div
-            className="products-track"
-            ref={trackRef}
-            style={{ transform: `translateX(-${offset}px)` }}
-          >
-            {products.map((p) => (
-              <Link key={p.id} href={`/products/${p.id}`} className="prod-full-card" style={{ textDecoration: 'none' }}>
-                <div className="prod-card-top" style={{ background: 'transparent' }}>
-                  <Image
-                    src={p.image}
-                    alt={p.name}
-                    width={200}
-                    height={240}
-                    style={{ height: 240, width: 'auto', objectFit: 'contain' }}
-                  />
+      {/* GRID */}
+      <div className="pg-grid-section">
+        <div className="pg-products-grid">
+          {filtered.map((p, i) => (
+            <Link
+              key={p.id}
+              href={`/products/${p.id}`}
+              className="pg-card"
+              style={{ '--card-color': p.color, '--card-glow': p.color + '33', animationDelay: `${i * 0.07}s` } as React.CSSProperties}
+              onMouseEnter={() => setHovered(p.id)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {/* Glow orb */}
+              <div className="pg-card-orb" style={{ background: `radial-gradient(ellipse, ${p.color}22, transparent 70%)` }} />
+
+              {/* Top accent line */}
+              <div className="pg-card-accent" style={{ background: p.color }} />
+
+              {/* Image zone */}
+              <div className="pg-card-img-wrap">
+                <div
+                  className="pg-card-img-glow"
+                  style={{ background: `radial-gradient(ellipse 80% 60% at 50% 80%, ${p.color}40, transparent 70%)` }}
+                />
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  width={180}
+                  height={260}
+                  className={`pg-card-img${hovered === p.id ? ' hovered' : ''}`}
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+
+              {/* Info */}
+              <div className="pg-card-body">
+                <div className="pg-card-series" style={{ color: p.color }}>{p.series}</div>
+                <div className="pg-card-name">{p.name}</div>
+
+                <div
+                  className="pg-card-badge"
+                  style={{ background: p.usecaseBg, color: p.usecaseColor, border: `1px solid ${p.usecaseBorder}` }}
+                >
+                  {p.usecase}
                 </div>
-                <div className="prod-card-info">
-                  <div className="prod-card-tag" style={{ color: p.color }}>{p.series}</div>
-                  <div className="prod-card-name">{p.name}</div>
-                  <div
-                    className="prod-card-usecase"
-                    style={{
-                      background: p.usecaseBg,
-                      color: p.usecaseColor,
-                      border: `1px solid ${p.usecaseBorder}`,
-                    }}
-                  >
-                    {p.usecase}
-                  </div>
-                  <div className="prod-card-desc">{p.desc.slice(0, 120)}...</div>
-                  <button className="prod-order-btn" style={{ background: p.color }}>
-                    <svg viewBox="0 0 24 24" fill="currentColor" width={13} height={13}>
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    Order Now
-                  </button>
+
+                <div className="pg-card-desc">{p.desc.slice(0, 100)}…</div>
+
+                {/* Specs row */}
+                <div className="pg-card-specs">
+                  {p.specs.slice(0, 2).map(s => (
+                    <div key={s.label} className="pg-spec">
+                      <span className="pg-spec-label">{s.label}</span>
+                      <span className="pg-spec-val" style={{ color: p.color }}>{s.val}</span>
+                    </div>
+                  ))}
                 </div>
-              </Link>
-            ))}
-          </div>
+
+                <div className="pg-card-cta" style={{ background: p.color }}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" width={13} height={13}>
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                  View & Order
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
-        <div className="slider-controls">
-          <button className="slider-btn" onClick={() => slide(-1)} aria-label="Previous">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={18} height={18}>
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
-
-          <div className="slider-dots">
-            {products.map((_, i) => (
-              <button
-                key={i}
-                className={`slider-dot${i === current ? ' active' : ''}`}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to product ${i + 1}`}
-              />
-            ))}
+        {filtered.length === 0 && (
+          <div className="pg-empty">
+            <span>No products found for this filter.</span>
+            <button className="pg-filter-btn active" onClick={() => setActive('All')} style={{ marginTop: '1rem' }}>Show All</button>
           </div>
+        )}
+      </div>
 
-          <button className="slider-btn" onClick={() => slide(1)} aria-label="Next">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={18} height={18}>
-              <polyline points="9 18 15 12 9 6"/>
-            </svg>
-          </button>
+      {/* CTA STRIP */}
+      <div className="pg-cta-strip">
+        <div className="pg-cta-text">
+          <span className="section-label" style={{ display: 'block', marginBottom: '.4rem' }}>Become a Dealer</span>
+          <h2 className="section-title" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', marginBottom: '.5rem' }}>
+            Ready to stock <span>BIOBRUST</span>?
+          </h2>
+          <p style={{ color: 'var(--muted)', fontSize: '.9rem' }}>Get exclusive dealer pricing, marketing support, and territory rights.</p>
         </div>
+        <Link href="/contact" className="btn-lg btn-lg-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width={14} height={14}><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Enquire Now
+        </Link>
       </div>
 
       <Footer />
