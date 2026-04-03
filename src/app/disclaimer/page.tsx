@@ -1,5 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Disclaimer – BIOBRUST Energy Drinks',
+  description: 'Read the BIOBRUST disclaimer. Important information about our energy drink products, health advisories, and limitations of liability.',
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: 'Disclaimer – BIOBRUST Energy Drinks',
+    description: 'Important disclaimers and health advisories for BIOBRUST energy drink products.',
+    type: 'website',
+  },
+}
 
 export default function DisclaimerPage() {
   return (

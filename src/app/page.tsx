@@ -1,14 +1,38 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { products } from '@/lib/products'
-import { productImages } from '@/lib/config'
+import { productImages, siteConfig } from '@/lib/config'
+import { BreadcrumbJsonLd } from '@/components/JsonLd'
+
+export const metadata: Metadata = {
+  title: 'BIOBRUST – Fuel Every High Performance Moment | Energy Drinks India',
+  description: 'BIOBRUST premium energy drinks engineered for athletes, gamers, hustlers & nightlife. 7 powerful flavors. PAN India dealer distribution available.',
+  alternates: { canonical: siteConfig.url },
+  keywords: ['biobrust', 'energy drink india', 'best energy drink', 'performance energy drink', 'gaming energy drink', 'biobrust dealer', 'energy drink pan india', 'buy energy drink india'],
+  openGraph: {
+    title: 'BIOBRUST – Fuel Every High Performance Moment',
+    description: 'Premium energy drinks engineered for athletes, gamers, hustlers & nightlife. 7 powerful flavors. PAN India dealer distribution.',
+    url: siteConfig.url,
+    type: 'website',
+    siteName: 'BIOBRUST',
+    images: [{ url: `${siteConfig.url}/images/og-image.jpeg`, width: 1200, height: 630, alt: 'BIOBRUST Energy Drinks' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BIOBRUST – Fuel Every High Performance Moment',
+    description: 'Premium energy drinks engineered for athletes, gamers & hustlers. PAN India distribution.',
+    images: [`${siteConfig.url}/images/og-image.jpeg`],
+  },
+}
 
 export default function HomePage() {
   const preview = products.slice(0, 6)
 
   return (
     <main style={{ paddingTop: 72 }}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', url: siteConfig.url }]} />
       {/* HERO */}
       <section className="hero">
         <div className="hero-bg" />

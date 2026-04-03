@@ -1,5 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy – BIOBRUST Energy Drinks',
+  description: 'Read the BIOBRUST privacy policy. Learn how we collect, use, and protect your personal information when you visit our website or place a dealer enquiry.',
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: 'Privacy Policy – BIOBRUST Energy Drinks',
+    description: 'Learn how BIOBRUST collects, uses, and protects your personal information.',
+    type: 'website',
+  },
+}
 
 export default function PrivacyPage() {
   return (

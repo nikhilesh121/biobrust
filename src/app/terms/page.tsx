@@ -1,5 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions – BIOBRUST Energy Drinks',
+  description: 'Read the BIOBRUST terms and conditions governing use of our website, dealer enquiries, and purchase of our energy drink products across India.',
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: 'Terms & Conditions – BIOBRUST Energy Drinks',
+    description: 'Terms and conditions governing use of the BIOBRUST website and dealer network.',
+    type: 'website',
+  },
+}
 
 export default function TermsPage() {
   return (
