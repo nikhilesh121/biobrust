@@ -28,7 +28,13 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  const preview = products.slice(0, 6)
+  // Show complete rows only: count products per row at desktop (5 cols via auto-fill ~210px)
+  // With 8 products: 5+3 is bad, so we show 5+5=10 (all) or just the first complete row set
+  // Rule: if total <= perRow, show all; otherwise show floor(total/perRow)*perRow
+  const perRow = 5
+  const total = products.length
+  const previewCount = total <= perRow ? total : Math.floor(total / perRow) * perRow
+  const preview = products.slice(0, previewCount)
 
   return (
     <main style={{ paddingTop: 72 }}>
@@ -82,7 +88,7 @@ export default function HomePage() {
       {/* STATS */}
       <div className="stats-bar">
         <div className="stat">
-          <div className="stat-num">7+</div>
+          <div className="stat-num">8+</div>
           <div className="stat-label">Flavors</div>
         </div>
         <div className="stat">
@@ -104,7 +110,7 @@ export default function HomePage() {
         <span className="section-label">Our Line</span>
         <h2 className="section-title">Choose Your <span>Power</span></h2>
         <p className="section-sub">
-          Seven distinct formulas engineered for every warrior&apos;s need — from focus to nightlife domination.
+          Eight distinct formulas engineered for every warrior&apos;s need — from focus to nightlife domination.
         </p>
         <div className="products-grid">
           {preview.map((p) => (
@@ -185,7 +191,7 @@ export default function HomePage() {
                   <path d="M12 8v4l3 3"/>
                 </svg>
                 <div className="pillar-name">7+ Flavors</div>
-                <div className="pillar-desc">From Classic to Cranberry Mojito — a flavor for every battle.</div>
+                <div className="pillar-desc">From Classic to Virjit Mojito — a flavor for every battle.</div>
               </div>
               <div className="pillar">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#92c640" strokeWidth={2} width={28} height={28} style={{ marginBottom: '.7rem' }}>

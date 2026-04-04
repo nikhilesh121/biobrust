@@ -55,6 +55,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://biobrust.com/products/virjit</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://biobrust.com/contact</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>

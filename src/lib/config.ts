@@ -69,5 +69,6 @@ export const productImages = {
   ginger: `/images/${process.env.NEXT_PUBLIC_IMG_GINGER ?? '5.jpeg'}`,
   tonic: `/images/${process.env.NEXT_PUBLIC_IMG_TONIC ?? '6.jpeg'}`,
   zeroSugar: `/images/${process.env.NEXT_PUBLIC_IMG_ZERO_SUGAR ?? '7.jpeg'}`,
+  virjit: `/images/${process.env.NEXT_PUBLIC_IMG_VIRJIT ?? 'VirjitMojito.png'}`,
   logo: `/images/${process.env.NEXT_PUBLIC_IMG_LOGO ?? 'Logo.jpeg'}`,
 }

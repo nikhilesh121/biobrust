@@ -62,7 +62,7 @@ export default function AboutPage() {
                   <div className="tl-dot" />
                   <div>
                     <div className="tl-title">Product Expansion</div>
-                    <div className="tl-text">Line expands to 7+ formulas including the bestselling Cranberry Mojito, Ginger Ale, and Zero Sugar.</div>
+                    <div className="tl-text">Line expands to 8+ formulas including the bestselling Cranberry, Ginger Ale, Virjit Mojito and Zero Sugar.</div>
                   </div>
                 </div>
                 <div className="tl-item">
@@ -120,7 +120,7 @@ export default function AboutPage() {
               Seven Flavors. <span style={{ color: 'var(--neon)' }}>One Mission.</span>
             </div>
             <p className="body-text">
-              From the raw power of Original to the refreshing bite of Ginger Ale and the nightlife energy of Cranberry Mojito — every BIOBRUST flavor is crafted for a specific warrior and a specific moment.
+              From the raw power of Original to the refreshing bite of Ginger Ale and the nightlife energy of Cranberry — every BIOBRUST flavor is crafted for a specific warrior and a specific moment.
             </p>
             <p className="body-text" style={{ marginTop: '1rem' }}>
               Our Zero Sugar variant proves that healthy choices don&apos;t mean compromising on performance. With 80mg of precision-dosed caffeine and B-vitamin complexes, every can is a precision instrument.
