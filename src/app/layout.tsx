@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: siteConfig.url },
   category: 'food & beverage',
+  icons: {
+    icon: [
+      { url: '/images/Logo.jpeg', sizes: '32x32', type: 'image/jpeg' },
+      { url: '/images/Logo.jpeg', sizes: '16x16', type: 'image/jpeg' },
+    ],
+    apple: [
+      { url: '/images/Logo.jpeg', sizes: '180x180', type: 'image/jpeg' },
+    ],
+    shortcut: '/images/Logo.jpeg',
+  },
   openGraph: {
     type: 'website',
     url: siteConfig.url,
@@ -63,6 +73,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="BIOBRUST" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/images/Logo.jpeg" sizes="any" />
+        <link rel="icon" href="/images/Logo.jpeg" type="image/jpeg" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/images/Logo.jpeg" />
         <OrganizationJsonLd />
         <WebSiteJsonLd />
       </head>
