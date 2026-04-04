@@ -43,13 +43,13 @@ export default function PrivacyPage() {
         <p>Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We have no responsibility or liability for the content and activities of these linked sites.</p>
 
         <h2>7. Your Rights</h2>
-        <p>You have the right to access, correct, or delete your personal information that we hold. To exercise these rights, please contact us at <a href="mailto:info@biobrust.com">info@biobrust.com</a>.</p>
+        <p>You have the right to access, correct, or delete your personal information that we hold. To exercise these rights, please contact us at <a href="mailto:cc@biobrust.com">cc@biobrust.com</a>.</p>
 
         <h2>8. Changes to This Policy</h2>
         <p>We reserve the right to update this privacy policy at any time. Changes will be posted on this page with an updated revision date.</p>
 
         <h2>9. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@biobrust.com">info@biobrust.com</a>.</p>
+        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:cc@biobrust.com">cc@biobrust.com</a>.</p>
 
         <div style={{ marginTop: '3rem' }}>
           <Link href="/" className="btn-lg btn-lg-secondary">← Back to Home</Link>

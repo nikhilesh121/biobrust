@@ -43,7 +43,7 @@ export default function DisclaimerPage() {
         <p>BIOBRUST may use copyrighted material which has not always been specifically authorized by the copyright owner. We make such material available in our efforts to promote our products and services. We believe this constitutes a &apos;fair use&apos; of any such copyrighted material.</p>
 
         <h2>Contact</h2>
-        <p>If you have any questions about this Disclaimer, please contact us at <a href="mailto:info@biobrust.com">info@biobrust.com</a>.</p>
+        <p>If you have any questions about this Disclaimer, please contact us at <a href="mailto:cc@biobrust.com">cc@biobrust.com</a>.</p>
 
         <div style={{ marginTop: '3rem' }}>
           <Link href="/" className="btn-lg btn-lg-secondary">← Back to Home</Link>

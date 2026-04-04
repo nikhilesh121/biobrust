@@ -49,7 +49,7 @@ export default function TermsPage() {
         <p>We reserve the right to modify these terms at any time. Your continued use of the website after any changes constitutes your acceptance of the new terms.</p>
 
         <h2>9. Contact</h2>
-        <p>For any questions regarding these Terms &amp; Conditions, please contact us at <a href="mailto:info@biobrust.com">info@biobrust.com</a>.</p>
+        <p>For any questions regarding these Terms &amp; Conditions, please contact us at <a href="mailto:cc@biobrust.com">cc@biobrust.com</a>.</p>
 
         <div style={{ marginTop: '3rem' }}>
           <Link href="/" className="btn-lg btn-lg-secondary">← Back to Home</Link>
