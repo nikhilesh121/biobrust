@@ -8,12 +8,12 @@ import { BreadcrumbJsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'BIOBRUST – Fuel Every High Performance Moment | Energy Drinks India',
-  description: 'BIOBRUST premium energy drinks engineered for athletes, gamers, hustlers & nightlife. 7 powerful flavors. PAN India dealer distribution available.',
+  description: 'BIOBRUST premium energy drinks engineered for athletes, gamers, hustlers & nightlife. 8 powerful flavors. Pan India & International dealer distribution available.',
   alternates: { canonical: siteConfig.url },
   keywords: ['biobrust', 'energy drink india', 'best energy drink', 'performance energy drink', 'gaming energy drink', 'biobrust dealer', 'energy drink pan india', 'buy energy drink india'],
   openGraph: {
     title: 'BIOBRUST – Fuel Every High Performance Moment',
-    description: 'Premium energy drinks engineered for athletes, gamers, hustlers & nightlife. 7 powerful flavors. PAN India dealer distribution.',
+    description: 'Premium energy drinks engineered for athletes, gamers, hustlers & nightlife. 8 powerful flavors. Pan India & International distribution.',
     url: siteConfig.url,
     type: 'website',
     siteName: 'BIOBRUST',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BIOBRUST – Fuel Every High Performance Moment',
-    description: 'Premium energy drinks engineered for athletes, gamers & hustlers. PAN India distribution.',
+    description: 'Premium energy drinks engineered for athletes, gamers & hustlers. Pan India & International distribution.',
     images: [`${siteConfig.url}/images/og-image.jpeg`],
   },
 }
@@ -100,8 +100,8 @@ export default function HomePage() {
           <div className="stat-label">Bio Energy</div>
         </div>
         <div className="stat">
-          <div className="stat-num">PAN India</div>
-          <div className="stat-label">Distribution</div>
+          <div className="stat-num">Pan India</div>
+          <div className="stat-label">&amp; International</div>
         </div>
       </div>
 
@@ -110,7 +110,7 @@ export default function HomePage() {
         <span className="section-label">Our Line</span>
         <h2 className="section-title">Choose Your <span>Power</span></h2>
         <p className="section-sub">
-          Eight distinct formulas engineered for every warrior&apos;s need — from focus to nightlife domination.
+          Eight distinct formulas engineered for every warrior&apos;s need — from morning focus to nightlife domination.
         </p>
         <div className="products-grid">
           {preview.map((p) => (
@@ -190,8 +190,8 @@ export default function HomePage() {
                   <circle cx="12" cy="12" r="10"/>
                   <path d="M12 8v4l3 3"/>
                 </svg>
-                <div className="pillar-name">7+ Flavors</div>
-                <div className="pillar-desc">From Classic to Virjit Mojito — a flavor for every battle.</div>
+                <div className="pillar-name">8+ Flavors</div>
+                <div className="pillar-desc">From Classic to Virgin Mojito — a flavor for every battle.</div>
               </div>
               <div className="pillar">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#92c640" strokeWidth={2} width={28} height={28} style={{ marginBottom: '.7rem' }}>
@@ -223,7 +223,7 @@ export default function HomePage() {
         <div>
           <div className="cta-title">Ready to Stock BIOBRUST?</div>
           <p className="cta-sub">
-            Join our nationwide dealer network. Get exclusive pricing, marketing support, and direct supply. Build your business with India&apos;s boldest energy brand.
+            Join our nationwide dealer network. Get exclusive pricing, marketing support, and direct supply. Pan India &amp; International availability. Build your business with India&apos;s boldest energy brand.
           </p>
         </div>
         <div className="cta-btns">

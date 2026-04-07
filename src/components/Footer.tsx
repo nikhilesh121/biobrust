@@ -50,10 +50,11 @@ export default function Footer() {
           <Link href="/products/original">Original</Link>
           <Link href="/products/classic">Classic</Link>
           <Link href="/products/citrus">Citrus Drink</Link>
-          <Link href="/products/cranberry">Cranberry Mojito</Link>
+          <Link href="/products/cranberry">Cranberry</Link>
           <Link href="/products/ginger">Ginger Ale</Link>
           <Link href="/products/tonic">Tonic Water</Link>
           <Link href="/products/zero">Zero Sugar</Link>
+          <Link href="/products/virjit">Virgin Mojito</Link>
         </div>
 
         <div className="footer-col">

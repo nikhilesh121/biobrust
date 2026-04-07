@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'About BIOBRUST – Our Mission, Story & Energy Drink Philosophy',
-  description: 'Learn about BIOBRUST — the premium Indian energy drink brand built for athletes, gamers, and hustlers. PAN India distribution, 7+ flavors.',
+  description: 'Learn about BIOBRUST — the premium Indian energy drink brand built for athletes, gamers, and hustlers. Pan India & International availability, 8+ flavors.',
   alternates: { canonical: `${siteConfig.url}/about` },
   openGraph: {
     title: 'About BIOBRUST – Our Mission & Story',
@@ -62,14 +62,14 @@ export default function AboutPage() {
                   <div className="tl-dot" />
                   <div>
                     <div className="tl-title">Product Expansion</div>
-                    <div className="tl-text">Line expands to 8+ formulas including the bestselling Cranberry, Ginger Ale, Virjit Mojito and Zero Sugar.</div>
+                    <div className="tl-text">Line expands to 8+ formulas including the bestselling Cranberry, Ginger Ale, Virgin Mojito and Zero Sugar.</div>
                   </div>
                 </div>
                 <div className="tl-item">
                   <div className="tl-dot" />
                   <div>
                     <div className="tl-title">National Distribution</div>
-                    <div className="tl-text">Pan-India dealer network established with growing presence across 10+ states.</div>
+                    <div className="tl-text">Pan India &amp; International dealer network established with growing presence across 10+ states.</div>
                   </div>
                 </div>
                 <div className="tl-item">
@@ -117,13 +117,13 @@ export default function AboutPage() {
         <div className="about-row">
           <div>
             <div className="big-text">
-              Seven Flavors. <span style={{ color: 'var(--neon)' }}>One Mission.</span>
+              Eight Flavors. <span style={{ color: 'var(--neon)' }}>One Mission.</span>
             </div>
             <p className="body-text">
-              From the raw power of Original to the refreshing bite of Ginger Ale and the nightlife energy of Cranberry — every BIOBRUST flavor is crafted for a specific warrior and a specific moment.
+              From the raw power of Original to the refreshing bite of Ginger Ale and the bold energy of Cranberry — every BIOBRUST flavor is crafted for a specific warrior and a specific moment.
             </p>
             <p className="body-text" style={{ marginTop: '1rem' }}>
-              Our Zero Sugar variant proves that healthy choices don&apos;t mean compromising on performance. With 80mg of precision-dosed caffeine and B-vitamin complexes, every can is a precision instrument.
+              Our Zero Sugar variant proves that healthy choices don&apos;t mean compromising on performance. With 75mg of precision-dosed caffeine and B-vitamin complexes, every can is a precision instrument.
             </p>
             <div style={{ marginTop: '2rem' }}>
               <Link href="/products" className="btn-lg btn-lg-primary">
@@ -153,7 +153,7 @@ export default function AboutPage() {
             Become a <span>BIOBRUST Dealer</span>
           </h2>
           <p style={{ color: 'var(--muted)', maxWidth: 500, margin: '0 auto 2rem', lineHeight: 1.75 }}>
-            Partner with India&apos;s boldest energy drink brand. Get exclusive pricing, dedicated support, and be part of something that&apos;s just getting started.
+            Partner with India&apos;s boldest energy drink brand. Get exclusive pricing, dedicated support, and Pan India &amp; International distribution rights. Be part of something that&apos;s just getting started.
           </p>
           <Link href="/contact" className="btn-lg btn-lg-primary">
             <svg viewBox="0 0 24 24" fill="currentColor" width={14} height={14}>

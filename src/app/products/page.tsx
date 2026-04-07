@@ -8,7 +8,7 @@ import { products } from '@/lib/products'
 import { BreadcrumbJsonLd } from '@/components/JsonLd'
 import { siteConfig } from '@/lib/config'
 
-const filters = ['All', 'Energy', 'Night Series', 'Fresh Series', 'Classic Series', 'Zero Series']
+const filters = ['All', 'Energy', 'Fresh Series', 'Classic Series', 'Mojito Series', 'Zero Series']
 
 export default function ProductsPage() {
   const [active, setActive] = useState('All')
@@ -28,10 +28,10 @@ export default function ProductsPage() {
       <div className="pg-products-hero">
         <span className="section-label">Full Product Line</span>
         <h1 className="section-title pg-products-title">
-          Choose Your <span>Formula</span>
+          Choose Your <span>Power</span>
         </h1>
         <p className="pg-products-sub">
-          Seven performance-engineered energy drinks. One iconic brand.<br className="pg-products-br" />
+          Eight performance-engineered energy drinks. One iconic brand.<br className="pg-products-br" />
           Click any product to explore and place your dealer order.
         </p>
 

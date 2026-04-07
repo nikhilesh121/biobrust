@@ -11,7 +11,7 @@
   --border: rgba(146,198,64,0.14);
   --border-hover: rgba(146,198,64,0.4);
   --text: #ddedb0;
-  --muted: #6a7a50;
+  --muted: #8fa870;
   --white: #ffffff;
 }
 
@@ -68,7 +68,7 @@ a { text-decoration: none; }
 }
 .nav-menu a {
   text-decoration: none; color: var(--muted);
-  font-family: 'Orbitron', sans-serif; font-size: .58rem;
+  font-family: 'Orbitron', sans-serif; font-size: .65rem;
   font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
   padding: .5rem .85rem; border-radius: 3px;
   transition: all .25s; position: relative;
@@ -112,7 +112,7 @@ a { text-decoration: none; }
 .mobile-nav.open { display: flex; }
 .mobile-nav a {
   text-decoration: none; color: var(--muted);
-  font-family: 'Orbitron', sans-serif; font-size: .65rem;
+  font-family: 'Orbitron', sans-serif; font-size: .72rem;
   font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
   padding: .9rem 1rem; border: 1px solid transparent; border-radius: 3px; transition: all .25s;
 }
@@ -195,12 +195,12 @@ a { text-decoration: none; }
   font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900;
   color: var(--neon); text-shadow: 0 0 25px var(--neon-glow);
 }
-.stat-label { font-size: .72rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: .3rem; }
+.stat-label { font-size: .78rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: .3rem; }
 
 /* ======================== SECTIONS ======================== */
 .section { padding: 6rem; }
 .section-label {
-  font-family: 'Orbitron', sans-serif; font-size: .56rem; letter-spacing: 4px; color: var(--neon);
+  font-family: 'Orbitron', sans-serif; font-size: .65rem; letter-spacing: 4px; color: var(--neon);
   text-transform: uppercase; margin-bottom: 1rem; display: block;
 }
 .section-title {
@@ -208,7 +208,7 @@ a { text-decoration: none; }
   color: var(--white); line-height: 1.2; margin-bottom: 1rem;
 }
 .section-title span { color: var(--neon); }
-.section-sub { color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 560px; }
+.section-sub { color: var(--muted); font-size: 1.05rem; line-height: 1.75; max-width: 560px; }
 
 /* ======================== PRODUCT GRID ======================== */
 .products-grid {
@@ -224,12 +224,12 @@ a { text-decoration: none; }
 .can-display { height: 180px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
 .can-display img { height: 165px; width: auto; object-fit: contain; transition: transform .4s cubic-bezier(.23,1,.32,1); background: transparent; }
 .prod-card:hover .can-display img { transform: scale(1.1) translateY(-5px); }
-.prod-flavor { font-family: 'Orbitron', sans-serif; font-size: .56rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: .4rem; }
+.prod-flavor { font-family: 'Orbitron', sans-serif; font-size: .64rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: .4rem; }
 .prod-name { font-family: 'Cinzel Decorative', serif; font-size: 1rem; color: var(--white); margin-bottom: .45rem; }
-.prod-desc { font-size: .84rem; color: var(--muted); line-height: 1.5; }
+.prod-desc { font-size: .9rem; color: var(--muted); line-height: 1.55; }
 .prod-badge {
   display: inline-block; margin-top: .8rem; padding: .25rem .75rem;
-  font-family: 'Orbitron', sans-serif; font-size: .48rem; letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif; font-size: .56rem; letter-spacing: 2px;
   text-transform: uppercase; border-radius: 2px;
 }
 .prod-cta-overlay {
@@ -256,7 +256,7 @@ a { text-decoration: none; }
 }
 .pillar:hover { border-color: var(--border-hover); }
 .pillar-name { font-family: 'Orbitron', sans-serif; font-size: .58rem; letter-spacing: 2px; color: var(--neon); text-transform: uppercase; }
-.pillar-desc { font-size: .82rem; color: var(--muted); margin-top: .4rem; line-height: 1.5; }
+.pillar-desc { font-size: .9rem; color: var(--muted); margin-top: .4rem; line-height: 1.6; }
 .about-visual { display: flex; justify-content: center; align-items: center; position: relative; }
 .about-circle {
   width: 380px; height: 380px; border-radius: 50%;
@@ -286,7 +286,7 @@ a { text-decoration: none; }
   box-shadow: 0 0 20px var(--neon);
 }
 .cta-title { font-family: 'Cinzel Decorative', serif; font-size: 1.8rem; color: var(--white); margin-bottom: .7rem; }
-.cta-sub { color: var(--muted); font-size: .95rem; line-height: 1.7; }
+.cta-sub { color: var(--muted); font-size: 1rem; line-height: 1.7; }
 .cta-btns { display: flex; gap: 1rem; flex-shrink: 0; }
 
 /* ======================== PRODUCTS PAGE ======================== */
@@ -311,7 +311,7 @@ a { text-decoration: none; }
 }
 .pg-products-title { font-size: clamp(2rem, 4vw, 3.5rem); }
 .pg-products-sub {
-  color: var(--muted); font-size: 1rem; max-width: 620px;
+  color: var(--muted); font-size: 1.05rem; max-width: 620px;
   margin: .75rem auto 0; line-height: 1.75;
 }
 .pg-products-br { display: none; }
@@ -325,7 +325,7 @@ a { text-decoration: none; }
   padding: .45rem 1.1rem; border-radius: 30px;
   background: transparent; border: 1px solid var(--border);
   color: var(--muted); font-family: 'Orbitron', sans-serif;
-  font-size: .5rem; letter-spacing: 2px; text-transform: uppercase;
+  font-size: .6rem; letter-spacing: 2px; text-transform: uppercase;
   cursor: pointer; transition: all .25s;
 }
 .pg-filter-btn:hover { border-color: var(--neon); color: var(--neon); }
@@ -336,7 +336,7 @@ a { text-decoration: none; }
 }
 .pg-product-count {
   margin-top: 1.2rem; font-family: 'Orbitron', sans-serif;
-  font-size: .52rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+  font-size: .62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
 }
 
 /* Grid */
@@ -403,7 +403,7 @@ a { text-decoration: none; }
 /* Card body */
 .pg-card-body { position: relative; z-index: 1; padding: 1.4rem 1.6rem 1.8rem; flex: 1; display: flex; flex-direction: column; }
 .pg-card-series {
-  font-family: 'Orbitron', sans-serif; font-size: .48rem;
+  font-family: 'Orbitron', sans-serif; font-size: .58rem;
   letter-spacing: 3px; text-transform: uppercase; margin-bottom: .5rem;
 }
 .pg-card-name {
@@ -416,7 +416,7 @@ a { text-decoration: none; }
   letter-spacing: 2px; text-transform: uppercase; border-radius: 2px;
 }
 .pg-card-desc {
-  font-size: .83rem; color: var(--muted); line-height: 1.6;
+  font-size: .9rem; color: var(--muted); line-height: 1.65;
   margin-bottom: 1rem; flex: 1;
 }
 
@@ -430,7 +430,7 @@ a { text-decoration: none; }
 }
 .pg-spec-label {
   display: block; font-family: 'Orbitron', sans-serif;
-  font-size: .42rem; letter-spacing: 1.5px; text-transform: uppercase;
+  font-size: .55rem; letter-spacing: 1.5px; text-transform: uppercase;
   color: var(--muted); margin-bottom: .2rem;
 }
 .pg-spec-val {
@@ -498,7 +498,7 @@ a { text-decoration: none; }
   background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px;
   padding: .9rem 1rem;
 }
-.spec-label { font-family: 'Orbitron', sans-serif; font-size: .5rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+.spec-label { font-family: 'Orbitron', sans-serif; font-size: .62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
 .spec-value { font-family: 'Orbitron', sans-serif; font-size: .75rem; font-weight: 700; color: var(--neon); }
 
 /* ======================== FORMS ======================== */
@@ -545,20 +545,20 @@ a { text-decoration: none; }
 .about-sections { padding: 5rem 6rem; display: grid; gap: 5rem; }
 .about-row { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .big-text { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.4rem, 2.5vw, 2.2rem); color: var(--white); margin-bottom: 1.2rem; line-height: 1.3; }
-.body-text { color: var(--muted); line-height: 1.8; font-size: .95rem; }
+.body-text { color: var(--muted); line-height: 1.8; font-size: 1rem; }
 .highlight-block { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; }
 .highlight-block::after { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--neon); }
 .timeline { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
 .tl-item { display: flex; gap: 1.5rem; align-items: flex-start; }
 .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--neon); flex-shrink: 0; margin-top: 6px; box-shadow: 0 0 10px var(--neon); }
 .tl-title { font-family: 'Orbitron', sans-serif; font-size: .6rem; letter-spacing: 2px; color: var(--neon); margin-bottom: .3rem; }
-.tl-text { color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.tl-text { color: var(--muted); font-size: .93rem; line-height: 1.6; }
 .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
 .value-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; text-align: center; transition: all .3s; }
 .value-card:hover { border-color: var(--neon-dim); transform: translateY(-4px); }
 .value-icon { width: 36px; height: 36px; margin: 0 auto 1rem; color: var(--neon); }
 .value-name { font-family: 'Orbitron', sans-serif; font-size: .6rem; letter-spacing: 2px; color: var(--neon); text-transform: uppercase; margin-bottom: .6rem; }
-.value-text { color: var(--muted); font-size: .84rem; line-height: 1.6; }
+.value-text { color: var(--muted); font-size: .9rem; line-height: 1.6; }
 
 /* ======================== CONTACT PAGE ======================== */
 .contact-layout {
@@ -567,7 +567,7 @@ a { text-decoration: none; }
   align-items: start;
 }
 .contact-info-col h2 { font-family: 'Cinzel Decorative', serif; font-size: 1.6rem; color: var(--white); margin-bottom: 1rem; line-height: 1.3; }
-.contact-info-col p { color: var(--muted); font-size: .92rem; line-height: 1.75; margin-bottom: 2rem; }
+.contact-info-col p { color: var(--muted); font-size: .97rem; line-height: 1.75; margin-bottom: 2rem; }
 .contact-items { display: flex; flex-direction: column; gap: 1.2rem; }
 .contact-item {
   display: flex; align-items: flex-start; gap: 1rem;
@@ -575,7 +575,7 @@ a { text-decoration: none; }
   padding: 1.1rem 1.2rem; transition: border-color .3s;
 }
 .contact-item:hover { border-color: var(--border-hover); }
-.contact-item-label { font-family: 'Orbitron', sans-serif; font-size: .5rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
+.contact-item-label { font-family: 'Orbitron', sans-serif; font-size: .6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
 .contact-item-val { color: var(--text); font-size: .92rem; }
 .contact-form-box {
   background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
@@ -616,7 +616,7 @@ footer {
 .footer-brand .nav-brand { font-size: 1.2rem; display: block; margin-top: .5rem; }
 .footer-tagline { color: var(--muted); font-size: .85rem; margin-top: .7rem; line-height: 1.6; }
 .footer-col h4 { font-family: 'Orbitron', sans-serif; font-size: .56rem; letter-spacing: 3px; text-transform: uppercase; color: var(--neon); margin-bottom: 1.2rem; }
-.footer-col a { display: block; color: var(--muted); font-size: .86rem; text-decoration: none; margin-bottom: .6rem; cursor: pointer; transition: color .25s; }
+.footer-col a { display: block; color: var(--muted); font-size: .9rem; text-decoration: none; margin-bottom: .6rem; cursor: pointer; transition: color .25s; }
 .footer-col a:hover { color: var(--neon); }
 .footer-social { display: flex; gap: .75rem; margin-top: 1rem; }
 .footer-social a {
@@ -627,17 +627,17 @@ footer {
 }
 .footer-social a:hover { border-color: var(--neon); color: var(--neon); background: rgba(146,198,64,0.1); }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-copy { color: var(--muted); font-size: .78rem; }
+.footer-copy { color: var(--muted); font-size: .84rem; }
 .footer-legal { display: flex; gap: 2rem; }
-.footer-legal a { color: var(--muted); font-size: .76rem; text-decoration: none; cursor: pointer; transition: color .25s; }
+.footer-legal a { color: var(--muted); font-size: .82rem; text-decoration: none; cursor: pointer; transition: color .25s; }
 .footer-legal a:hover { color: var(--neon); }
 
 /* ======================== LEGAL PAGES ======================== */
 .legal-content { max-width: 860px; margin: 0 auto; padding: 4rem 6rem 6rem; }
 .legal-content h2 { font-family: 'Cinzel Decorative', serif; font-size: 1rem; color: var(--neon); margin-bottom: .8rem; margin-top: 2.5rem; }
 .legal-content h2:first-child { margin-top: 0; }
-.legal-content p { color: var(--muted); font-size: .9rem; line-height: 1.8; margin-bottom: 1rem; }
-.legal-content ul { color: var(--muted); font-size: .9rem; line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1rem; }
+.legal-content p { color: var(--muted); font-size: .95rem; line-height: 1.8; margin-bottom: 1rem; }
+.legal-content ul { color: var(--muted); font-size: .95rem; line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1rem; }
 .legal-content a { color: var(--neon); text-decoration: none; }
 
 /* ======================== MODAL / TOAST ======================== */
